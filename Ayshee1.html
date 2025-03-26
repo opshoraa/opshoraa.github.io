@@ -41,6 +41,7 @@
   <p> Fly high and never look back! Hi,this is a positive thinker Opshora</p>
    <input id="Name" placeholder="Your name">
   <input id="Email" type="email" placeholder="Your email">
+  <input id="Profession"  type="Profesion" placeholder="your Profession">
   <input id="submit" type="submit">
 <script type="module">
   // Import the functions you need from the SDKs you need
@@ -69,6 +70,7 @@
   
 const Name = document.querySelector("#Name") 
 const Email = document.querySelector("#Email")
+const Profession = document.querySelector("#Profession")
 document.querySelector('#submit').addEventListener('click', Submit)
 
 
@@ -77,11 +79,13 @@ function Submit() {
   
   set(ref(db, timestamp), {
 	  Name: Name.value,
-      email: Email.value,
+      email: Email.value,<a href="purplepart%201.html.html" id="" 
+	  Profession: Profession.value,
   });
 
   Name.value = ""
   Email.value = ""
+  Profession.value= ""
 }
 function buildTimestamp() {
   const now = new Date();
