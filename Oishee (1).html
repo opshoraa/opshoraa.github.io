@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Funnel+Display:wght@300..800&family=Ga+Maamli&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Funnel+Display:wght@300..800&family=Ga+Maamli&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Funnel+Display:wght@300..800&family=Ga+Maamli&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
+
+<style>
+body {
+  font-family: "Roboto Mono", sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #acd7d2;
+  
+}
+
+div {
+  height: 300px;
+  background-size: 110% 110%;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius:12px;
+}
+h1 {
+  font-family: "Bokor";
+  text-align: center;
+  font-size: 75px;
+  color: red;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: green;
+  font-family:"Funnel Display";
+  margin: 0px 0 70px 0;
+}
+p {
+  color: orange;
+  background: black;
+  background: linear-gradient(bottom, rgba(200,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(200,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(200,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5okG0tz2dWr36k2p9gxbFmqoM4AeW1e3pPQ&s");
+}
+.second{
+  background-image: url("https://www.torontopho.com/images/blog/2023/10/What_are_the_best_ways_to_avoid_junk_food.jpg");
+}
+.dessert{
+  background-image: url("https://static.vecteezy.com/system/resources/previews/035/985/777/non_2x/ai-generated-tcookie-plate-dessert-food-photo.jpg");
+}
+.drink{
+	background-image: url("https://corkframes.com/cdn/shop/articles/Corkframes_Coffee_Guide_520x500_422ebe38-4cfa-42b5-a266-b9bfecabaf30.jpg?v=1734598727");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  input {
+  	font-size: 22px;
+  }
+
+  
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Golden Harvest Restaurent</h1>
+<h2>[an apetizing food store]</h2>
+<div class="first">
+    <input type="number" min="0" style="width: 50px"class="quantities"> 
+  <p>Burger with Fries<span class="price">$15</span><br />
+  <small>The burger and fries are spcially made with skilled cheif and it's worth to eat.If you eat one time you will want to eat it 100 times.</small></p>
+</div>
+  
+  
+<div class="second">
+    <input type="number" min="0" style="width: 50px"class="quantities"> 
+  <p>Extra large pakage burger with coke <span class="price">$17</span><br />
+  <small>This extra large burger size with fries cost 17 dollars only and the coke is free. It's supper apetizing.</small></p>
+</div>
+  
+<div class="dessert">
+    <input type="number" min="0" style="width: 50px"class="quantities"> 
+  <p>Fruit pudding with vanilla cream <span class="price">$10</span><br />
+  <small>Vanilla cake with friuts,berry little cherry and caramel on top of it.Test like heaven, if you try it one time yopu will want to eat it 100 times..</small></p>
+</div>
+
+<div class="drink">
+    <input type="number" min="0" style="width: 50px"class="quantities"> 
+  <p>Coffee <span class="price">$5</span><br />
+  <small>Coffee is much more than just a morning boost – it’s a ritual, a social connection, and for many, a daily joy. From its origins in Ethiopia to becoming a global favorite, coffee has evolved into countless forms, catering to diverse tastes and cultures..</small></p>
+</div>
+
+ <input id="Name" placeholder="Your name">
+ <br><br>
+  <input id="Email" type="email" placeholder="Your email">
+  <br><br>
+  <input id="submit" type="submit">
+  <br><br>
+  <br><br>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+
+
+
+</body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+  
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCVWdE4zLlm7ZotEIGggWqjCYUncqaFOUU",
+    authDomain: "rabbit-34b9a.firebaseapp.com",
+    databaseURL: "https://rabbit-34b9a-default-rtdb.firebaseio.com",
+    projectId: "rabbit-34b9a",
+    storageBucket: "rabbit-34b9a.firebasestorage.app",
+    messagingSenderId: "870020852223",
+    appId: "1:870020852223:web:979d168386db11bfd69fca",
+    measurementId: "G-KF67BEF955"
+  };
+
+  // Initialize Firebase
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+
+
+  const Name = document.querySelector("#Name") 
+  const Email = document.querySelector("#Email")
+  document.querySelector('#submit').addEventListener('click', Submit)
+  
+ const quantities = document.querySelectorAll(".quantities") 
+const itemsList = ["Burger with fries", "Extra large package burger eith coke", "Fruit pudding with vanilla", "Coffee"]
+  
+  const prices = document.querySelectorAll(".price") 
+  
+  
+
+
+  function Submit() {
+    const timestamp = buildTimestamp()
+    let total = 0
+  	let cart = { }
+  	for  (let i=0; i<quantities.length; i=i+1) {
+  	  if (quantities[i].value != "0" && quantities[i].value != "") {
+		let price = prices[i].innerHTML.replace('$', '')
+		total = total + quantities[i].value * price 
+          	
+  	    cart[itemsList[i]] = parseInt(quantities[i].value) 
+  	  }
+  	  quantities[i].value = ""
+  	}
+      
+  
+    set(ref(db, timestamp), {
+  	  Name: Name.value,
+      email: Email.value,
+	  cart: cart,
+      totalPrice: total,
+      paid: "not yet",
+        
+    });
+
+    Name.value = ""
+    Email.value = ""
+  }
+  function buildTimestamp() {
+    const now = new Date();
+    let timestamp = now.getFullYear().toString() + "/";
+    //const month = now.toLocaleString('default', { month: 'long' });
+
+    let month = now.getMonth()+1   //add 1 because Javascript uses 0 for January
+    month = month.toString()
+    month = addLeadingZero(month)
+    timestamp += month + "/"; 
+
+    let date = now.getDate().toString()
+    date = addLeadingZero(date)
+    timestamp += date + "/";
+
+    let hours = now.getHours().toString()
+    hours = addLeadingZero(hours)
+    timestamp += hours + ":";
+
+    let minutes = now.getMinutes().toString()
+    minutes = addLeadingZero(minutes)
+    timestamp += minutes + ":";
+
+    let seconds = now.getSeconds().toString()
+    seconds = addLeadingZero(seconds)
+    timestamp += seconds;
+
+    return timestamp
+  }
+
+  function addLeadingZero(units) {
+  	if (units.length < 2) {
+  		units = "0" + units
+  	}
+  	return units
+  }
+
+
+</script>
+
