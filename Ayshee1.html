@@ -1,2 +1,131 @@
+<!DOCTYPE html>
+<head<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Funnel+Display:wght@300..800&family=Ga+Maamli&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Funnel+Display:wght@300..800&family=Ga+Maamli&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+  <title>Anna Dowlin</title>
+  <style>
+    body {
+      text-align: center;
+      background: url("https://i.pinimg.com/1200x/5d/2b/1a/5d2b1ad47bf56994f09e8a214e432c97.jpg");
+      background-size: cover;
+      background-position: center;
+      color: purple;
+      font-family: helvetica;
+    }
+    p {
+      font-size: 22px;
+      font-family: "Roboto Mono", monospace;
+
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+    }
+    input[type="submit"]  {
+      background: Yellow ;
+      color: Blue;
+      font-family:"Ga Miamii"
+    }
+    img {
+      border-radius: 300px;
+      }
+  </style>
+</head>
+<body>
+  <img src="https://wallpapersok.com/images/thumbnail/hinata-hyuga-butterfly-wings-c7kb17i606rgiyis.webp">
+  <p> Fly high and never look back! Hi,this is a positive thinker Opshora</p>
+   <input id="Name" placeholder="Your name">
+  <input id="Email" type="email" placeholder="Your email">
+  <input id="Profession"  type="Profesion" placeholder="your Profession">
+  <input id="submit" type="submit">
+<script type="module">
+  // Import the functions you need from the SDKs you need
+
+	
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+	import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyC0d_zZowJi7GG8odluDvBadvTKgARxoeQ",
+    authDomain: "emoyshee.firebaseapp.com",
+    projectId: "emoyshee",
+    storageBucket: "emoyshee.firebasestorage.app",
+    messagingSenderId: "55418012776",
+    appId: "1:55418012776:web:d685e8f2b6176efac0e7dd",
+    measurementId: "G-E3F6Q2PPY4"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+  
+const Name = document.querySelector("#Name") 
+const Email = document.querySelector("#Email")
+const Profession = document.querySelector("#Profession")
+document.querySelector('#submit').addEventListener('click', Submit)
+
+
+function Submit() {
+  const timestamp = buildTimestamp()
+  
+  set(ref(db, timestamp), {
+	  Name: Name.value,
+      email: Email.value,
+	  Profession: Profession.value,
+  });
+
+  Name.value = ""
+  Email.value = ""
+  Profession.value= ""
+}
+function buildTimestamp() {
+  const now = new Date();
+  let timestamp = now.getFullYear().toString() + "/";
+  //const month = now.toLocaleString('default', { month: 'long' });
+
+  let month = now.getMonth()+1   //add 1 because Javascript uses 0 for January
+  month = month.toString()
+  month = addLeadingZero(month)
+  timestamp += month + "/"; 
+
+  let date = now.getDate().toString()
+  date = addLeadingZero(date)
+  timestamp += date + "/";
+
+  let hours = now.getHours().toString()
+  hours = addLeadingZero(hours)
+  timestamp += hours + ":";
+
+  let minutes = now.getMinutes().toString()
+  minutes = addLeadingZero(minutes)
+  timestamp += minutes + ":";
+
+  let seconds = now.getSeconds().toString()
+  seconds = addLeadingZero(seconds)
+  timestamp += seconds;
+
+  return timestamp
+}
+
+function addLeadingZero(units) {
+	if (units.length < 2) {
+		units = "0" + units
+	}
+	return units
+}
+
+
+
+
+</script>
+</body>
 
